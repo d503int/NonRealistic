@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A60F0DAF1C9C98F30025E3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60F0DAE1C9C98F30025E3E2 /* AppDelegate.swift */; };
+		A60F0DB11C9C98F30025E3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60F0DB01C9C98F30025E3E2 /* Assets.xcassets */; };
+		A60F0DB41C9C98F30025E3E2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60F0DB21C9C98F30025E3E2 /* MainMenu.xib */; };
+		A60F0DBF1C9C98F30025E3E2 /* NPRHalftoningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60F0DBE1C9C98F30025E3E2 /* NPRHalftoningTests.swift */; };
+		A60F0DCD1C9C9F340025E3E2 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60F0DCB1C9C9F340025E3E2 /* MasterViewController.swift */; };
+		A60F0DCE1C9C9F340025E3E2 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60F0DCC1C9C9F340025E3E2 /* MasterViewController.xib */; };
+		A665C2661C9DC9EF00E57A8E /* ScaryBugDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665C2651C9DC9EF00E57A8E /* ScaryBugDoc.swift */; };
+		A665C2681C9DCA3600E57A8E /* ScaryBugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665C2671C9DCA3600E57A8E /* ScaryBugData.swift */; };
+		A665C26D1C9DD38D00E57A8E /* EDStarRating.m in Sources */ = {isa = PBXBuildFile; fileRef = A665C26C1C9DD38D00E57A8E /* EDStarRating.m */; };
+		A665C2731C9DD41100E57A8E /* NSImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A665C2721C9DD41100E57A8E /* NSImage+Extras.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A60F0DBB1C9C98F30025E3E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A60F0DA31C9C98F30025E3E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60F0DAA1C9C98F30025E3E2;
+			remoteInfo = NPRHalftoning;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A60F0DAB1C9C98F30025E3E2 /* SampeOSXApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampeOSXApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60F0DAE1C9C98F30025E3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A60F0DB01C9C98F30025E3E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A60F0DB31C9C98F30025E3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A60F0DB51C9C98F30025E3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60F0DBA1C9C98F30025E3E2 /* SampeOSXApp.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampeOSXApp.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60F0DBE1C9C98F30025E3E2 /* NPRHalftoningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPRHalftoningTests.swift; sourceTree = "<group>"; };
+		A60F0DC01C9C98F30025E3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60F0DCB1C9C9F340025E3E2 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		A60F0DCC1C9C9F340025E3E2 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		A665C2651C9DC9EF00E57A8E /* ScaryBugDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaryBugDoc.swift; sourceTree = "<group>"; };
+		A665C2671C9DCA3600E57A8E /* ScaryBugData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaryBugData.swift; sourceTree = "<group>"; };
+		A665C26A1C9DD38C00E57A8E /* NPRHalftoning-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NPRHalftoning-Bridging-Header.h"; sourceTree = "<group>"; };
+		A665C26B1C9DD38D00E57A8E /* EDStarRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDStarRating.h; sourceTree = "<group>"; };
+		A665C26C1C9DD38D00E57A8E /* EDStarRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDStarRating.m; sourceTree = "<group>"; };
+		A665C2711C9DD41100E57A8E /* NSImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Extras.h"; sourceTree = "<group>"; };
+		A665C2721C9DD41100E57A8E /* NSImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Extras.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A60F0DA81C9C98F30025E3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60F0DB71C9C98F30025E3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A60F0DA21C9C98F30025E3E2 = {
+			isa = PBXGroup;
+			children = (
+				A60F0DAD1C9C98F30025E3E2 /* NPRHalftoning */,
+				A60F0DBD1C9C98F30025E3E2 /* NPRHalftoningTests */,
+				A665C26F1C9DD3C000E57A8E /* OtherSources */,
+				A60F0DAC1C9C98F30025E3E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A60F0DAC1C9C98F30025E3E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A60F0DAB1C9C98F30025E3E2 /* SampeOSXApp.app */,
+				A60F0DBA1C9C98F30025E3E2 /* SampeOSXApp.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A60F0DAD1C9C98F30025E3E2 /* NPRHalftoning */ = {
+			isa = PBXGroup;
+			children = (
+				A60F0DAE1C9C98F30025E3E2 /* AppDelegate.swift */,
+				A665C2641C9DC9C000E57A8E /* Clases */,
+				A60F0DD01C9C9F430025E3E2 /* Controllers */,
+				A60F0DC91C9C9EF50025E3E2 /* Resources */,
+				A60F0DCA1C9C9EFE0025E3E2 /* Supporting Files */,
+			);
+			path = NPRHalftoning;
+			sourceTree = "<group>";
+		};
+		A60F0DBD1C9C98F30025E3E2 /* NPRHalftoningTests */ = {
+			isa = PBXGroup;
+			children = (
+				A60F0DBE1C9C98F30025E3E2 /* NPRHalftoningTests.swift */,
+				A60F0DC01C9C98F30025E3E2 /* Info.plist */,
+			);
+			path = NPRHalftoningTests;
+			sourceTree = "<group>";
+		};
+		A60F0DC91C9C9EF50025E3E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A60F0DB01C9C98F30025E3E2 /* Assets.xcassets */,
+				A60F0DB21C9C98F30025E3E2 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A60F0DCA1C9C9EFE0025E3E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A665C26A1C9DD38C00E57A8E /* NPRHalftoning-Bridging-Header.h */,
+				A60F0DB51C9C98F30025E3E2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A60F0DCF1C9C9F380025E3E2 /* MasterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A60F0DCB1C9C9F340025E3E2 /* MasterViewController.swift */,
+				A60F0DCC1C9C9F340025E3E2 /* MasterViewController.xib */,
+			);
+			name = MasterViewController;
+			sourceTree = "<group>";
+		};
+		A60F0DD01C9C9F430025E3E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A60F0DCF1C9C9F380025E3E2 /* MasterViewController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A665C2641C9DC9C000E57A8E /* Clases */ = {
+			isa = PBXGroup;
+			children = (
+				A665C2651C9DC9EF00E57A8E /* ScaryBugDoc.swift */,
+				A665C2671C9DCA3600E57A8E /* ScaryBugData.swift */,
+			);
+			name = Clases;
+			sourceTree = "<group>";
+		};
+		A665C2691C9DD37800E57A8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A665C26E1C9DD3B700E57A8E /* EDStarRating */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A665C26E1C9DD3B700E57A8E /* EDStarRating */ = {
+			isa = PBXGroup;
+			children = (
+				A665C26B1C9DD38D00E57A8E /* EDStarRating.h */,
+				A665C26C1C9DD38D00E57A8E /* EDStarRating.m */,
+			);
+			name = EDStarRating;
+			sourceTree = "<group>";
+		};
+		A665C26F1C9DD3C000E57A8E /* OtherSources */ = {
+			isa = PBXGroup;
+			children = (
+				A665C2691C9DD37800E57A8E /* Views */,
+				A665C2701C9DD40100E57A8E /* Categories */,
+			);
+			name = OtherSources;
+			path = NPRHalftoning;
+			sourceTree = "<group>";
+		};
+		A665C2701C9DD40100E57A8E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A665C2741C9DD41900E57A8E /* NSImage+Extras */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		A665C2741C9DD41900E57A8E /* NSImage+Extras */ = {
+			isa = PBXGroup;
+			children = (
+				A665C2711C9DD41100E57A8E /* NSImage+Extras.h */,
+				A665C2721C9DD41100E57A8E /* NSImage+Extras.m */,
+			);
+			name = "NSImage+Extras";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60F0DAA1C9C98F30025E3E2 /* SampeOSXApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60F0DC31C9C98F30025E3E2 /* Build configuration list for PBXNativeTarget "SampeOSXApp" */;
+			buildPhases = (
+				A60F0DA71C9C98F30025E3E2 /* Sources */,
+				A60F0DA81C9C98F30025E3E2 /* Frameworks */,
+				A60F0DA91C9C98F30025E3E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampeOSXApp;
+			productName = NPRHalftoning;
+			productReference = A60F0DAB1C9C98F30025E3E2 /* SampeOSXApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A60F0DB91C9C98F30025E3E2 /* SampeOSXAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60F0DC61C9C98F30025E3E2 /* Build configuration list for PBXNativeTarget "SampeOSXAppTests" */;
+			buildPhases = (
+				A60F0DB61C9C98F30025E3E2 /* Sources */,
+				A60F0DB71C9C98F30025E3E2 /* Frameworks */,
+				A60F0DB81C9C98F30025E3E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A60F0DBC1C9C98F30025E3E2 /* PBXTargetDependency */,
+			);
+			name = SampeOSXAppTests;
+			productName = NPRHalftoningTests;
+			productReference = A60F0DBA1C9C98F30025E3E2 /* SampeOSXApp.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60F0DA31C9C98F30025E3E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = d503;
+				TargetAttributes = {
+					A60F0DAA1C9C98F30025E3E2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					A60F0DB91C9C98F30025E3E2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A60F0DAA1C9C98F30025E3E2;
+					};
+				};
+			};
+			buildConfigurationList = A60F0DA61C9C98F30025E3E2 /* Build configuration list for PBXProject "SampeOSXApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A60F0DA21C9C98F30025E3E2;
+			productRefGroup = A60F0DAC1C9C98F30025E3E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60F0DAA1C9C98F30025E3E2 /* SampeOSXApp */,
+				A60F0DB91C9C98F30025E3E2 /* SampeOSXAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60F0DA91C9C98F30025E3E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60F0DB11C9C98F30025E3E2 /* Assets.xcassets in Resources */,
+				A60F0DB41C9C98F30025E3E2 /* MainMenu.xib in Resources */,
+				A60F0DCE1C9C9F340025E3E2 /* MasterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60F0DB81C9C98F30025E3E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60F0DA71C9C98F30025E3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A665C2661C9DC9EF00E57A8E /* ScaryBugDoc.swift in Sources */,
+				A60F0DCD1C9C9F340025E3E2 /* MasterViewController.swift in Sources */,
+				A665C26D1C9DD38D00E57A8E /* EDStarRating.m in Sources */,
+				A60F0DAF1C9C98F30025E3E2 /* AppDelegate.swift in Sources */,
+				A665C2681C9DCA3600E57A8E /* ScaryBugData.swift in Sources */,
+				A665C2731C9DD41100E57A8E /* NSImage+Extras.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60F0DB61C9C98F30025E3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60F0DBF1C9C98F30025E3E2 /* NPRHalftoningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A60F0DBC1C9C98F30025E3E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60F0DAA1C9C98F30025E3E2 /* SampeOSXApp */;
+			targetProxy = A60F0DBB1C9C98F30025E3E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A60F0DB21C9C98F30025E3E2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60F0DB31C9C98F30025E3E2 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A60F0DC11C9C98F30025E3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A60F0DC21C9C98F30025E3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A60F0DC41C9C98F30025E3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NPRHalftoning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.d03.NPRHalftoning;
+				PRODUCT_NAME = SampeOSXApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "NPRHalftoning/NPRHalftoning-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A60F0DC51C9C98F30025E3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NPRHalftoning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.d03.NPRHalftoning;
+				PRODUCT_NAME = SampeOSXApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "NPRHalftoning/NPRHalftoning-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A60F0DC71C9C98F30025E3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NPRHalftoningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.d03.NPRHalftoningTests;
+				PRODUCT_NAME = SampeOSXApp;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampeOSXApp.app/Contents/MacOS/SampeOSXApp";
+			};
+			name = Debug;
+		};
+		A60F0DC81C9C98F30025E3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NPRHalftoningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.d03.NPRHalftoningTests;
+				PRODUCT_NAME = SampeOSXApp;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampeOSXApp.app/Contents/MacOS/SampeOSXApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60F0DA61C9C98F30025E3E2 /* Build configuration list for PBXProject "SampeOSXApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60F0DC11C9C98F30025E3E2 /* Debug */,
+				A60F0DC21C9C98F30025E3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60F0DC31C9C98F30025E3E2 /* Build configuration list for PBXNativeTarget "SampeOSXApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60F0DC41C9C98F30025E3E2 /* Debug */,
+				A60F0DC51C9C98F30025E3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60F0DC61C9C98F30025E3E2 /* Build configuration list for PBXNativeTarget "SampeOSXAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60F0DC71C9C98F30025E3E2 /* Debug */,
+				A60F0DC81C9C98F30025E3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A60F0DA31C9C98F30025E3E2 /* Project object */;
+}
