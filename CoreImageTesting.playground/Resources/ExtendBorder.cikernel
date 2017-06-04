@@ -8,8 +8,6 @@ kernel vec2 extendBorderKernel(vec2 center) {
     vec2 unitVector = vec2(1.0, 1.0);
     vec2 alpha = unitVector - abs(sign);
 
-    coord = alpha * centeredCoord + sign * (center - unitVector);
-
-    coord = coord + center;
+    coord = alpha * centeredCoord + sign * (center - unitVector) + center;
     return coord;
 }

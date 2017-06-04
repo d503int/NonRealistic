@@ -43,7 +43,6 @@ public class ExtendBorderFilter: CustomWarpKernelFilter {
         }
         
         let roiCallback: CIKernelROICallback = { (_, destRect: CGRect) -> CGRect in
-            print("ExtendBorderFilter: ExtendBorderFilter: roiCallback: \(destRect)");
             return destRect
         }
         
@@ -61,8 +60,6 @@ public class ExtendBorderFilter: CustomWarpKernelFilter {
         super.setDefaults()
         
         inputInset = ExtendBorderFilter.kDefaultInputInset
-        
-        print("ExtendBorderFilter.setDefaults()");
     }
     
     //MARK: Utilty methods

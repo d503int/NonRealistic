@@ -3,11 +3,14 @@ import CoreImage
 
 let lennaImageUrl = Bundle.main.url(forResource: "Lenna", withExtension: "png")!
 let test64ImageUrl = Bundle.main.url(forResource: "test64x64", withExtension: "png")!
-
+let test64Border1ImageUrl = Bundle.main.url(forResource: "test64x64Border1", withExtension: "png")!
+let test64Border2ImageUrl = Bundle.main.url(forResource: "test64x64Border2", withExtension: "png")!
 let context = CIContext()
 
 let lennaImage = CIImage(contentsOf: lennaImageUrl)
 let test64Image = CIImage(contentsOf: test64ImageUrl)
+let test64Border1Image = CIImage(contentsOf: test64Border1ImageUrl)
+let test64Border2Image = CIImage(contentsOf: test64Border2ImageUrl)
 
 // MARK: Sepia filter
 let sepiaFilter = CIFilter(name: "CISepiaTone")!
@@ -41,8 +44,8 @@ let customMonochromeResult = customMonochromeFilter.outputImage
 
 let extendBorderFilter = ExtendBorderFilter()!
 
-extendBorderFilter.setValue(test64Image, forKey: kCIInputImageKey)
-let extendBorderInset = CIVector(x: -10, y: -5)
+extendBorderFilter.setValue(lennaImage , forKey: kCIInputImageKey)
+let extendBorderInset = CIVector(x: -10, y: -10)
 extendBorderFilter.setValue(extendBorderInset, forKey: "inputInset")
 
 let customExtendedResult = extendBorderFilter.outputImage
