@@ -1,0 +1,7 @@
+kernel vec4 grayScaleKernel(__sample src, __color color, float intensity)
+{
+    vec4 pixValue = src;
+    float lightness = (pixValue.r + pixValue.g + pixValue.b) / 3.0;
+    pixValue.rgb = color.rgb * lightness * intensity;
+    return pixValue;
+}

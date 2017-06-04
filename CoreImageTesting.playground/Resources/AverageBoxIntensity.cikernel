@@ -1,0 +1,26 @@
+kernel vec4 averageBoxIntensity(sampler image, vec2 boxSize, float denominator)
+{
+    vec2 workingSpaceCoordinate = destCoord();
+
+    int boxSpaceCoordinateX = int(workingSpaceCoordinate.x / boxSize.x);
+    int boxSpaceCoordinateY = int(workingSpaceCoordinate.y / boxSize.y);
+
+    vec2 inBoxCoordinate = workingSpaceCoordinate - vec2(boxSpaceCoordinateX * boxSize.x, boxSpaceCoordinateY * boxSize.y);
+
+    vec3 accumulator = vec4(0.0, 0.0, 0.0, 0,0);
+
+    for (int x = boxSpaceCoordinateX; x <= boxSize.x; x++)
+    {
+        for (int y = boxSpaceCoordinateY; y <= boxSize.y; y++)
+        {
+            vec2 boxCoord = workingSpaceCoordinate + vec2(x,y);
+            vec2 imageSpaceCoordinate = samplerTransform(image, boxCoord);
+            vec4 color = sample(image, imageSpaceCoordinate);
+            accumulator += color;
+        }
+    }
+
+    vec4 pixel = accumulator /= denominator;
+
+    return pixel;
+}

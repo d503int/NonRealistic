@@ -1,0 +1,9 @@
+kernel vec4 grayScaleKernel(__sample src)
+{
+    vec4 pixValue = src;
+    float intensity = (pixValue.r + pixValue.g + pixValue.b) / 3.0;
+    pixValue.r = intensity;
+    pixValue.g = intensity;
+    pixValue.b = intensity;
+    return pixValue;
+}
