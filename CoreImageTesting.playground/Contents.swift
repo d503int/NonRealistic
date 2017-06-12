@@ -45,8 +45,12 @@ let customMonochromeResult = customMonochromeFilter.outputImage
 let extendBorderFilter = ExtendBorderFilter()!
 
 extendBorderFilter.setValue(lennaImage , forKey: kCIInputImageKey)
-let extendBorderInset = CIVector(x: -10, y: -10)
-extendBorderFilter.setValue(extendBorderInset, forKey: "inputInset")
+//let extendSymmetricalInsets = CIVector(x: -10, y: -10)
+//extendBorderFilter.setValue(extendSymmetricalInsets, forKey: "inputSymmetricalInsets")
+extendBorderFilter.setValue(NSNumber(value: 5.0), forKey: "inputTopInset")
+extendBorderFilter.setValue(NSNumber(value: 5.0), forKey: "inputBottomInset")
+extendBorderFilter.setValue(NSNumber(value: 5.0), forKey: "inputLeftInset")
+extendBorderFilter.setValue(NSNumber(value: 5.0), forKey: "inputRightInset")
 
 let customExtendedResult = extendBorderFilter.outputImage
 
@@ -54,3 +58,13 @@ let customExtendedResult = extendBorderFilter.outputImage
 //lanczosScaleTransformFilter.setValue(lennaImage, forKey: kCIInputImageKey)
 //lanczosScaleTransformFilter.setValue(1.5, forKey: kCIInputScaleKey)
 //let lanczosScaleResult = lanczosScaleTransformFilter.outputImage
+
+
+let boxMediumIntensityFilter = BoxMediumIntensityFilter()!
+boxMediumIntensityFilter.setDefaults()  
+
+boxMediumIntensityFilter.setValue(lennaImage , forKey: kCIInputImageKey)
+//boxMediumIntensityFilter.setValue(CIVector(x: 5.0, y: 5.0), forKey: "inputBoxSize")
+
+let boxMediumIntensityResult = boxMediumIntensityFilter.outputImage
+

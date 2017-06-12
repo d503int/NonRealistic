@@ -2,20 +2,33 @@ import CoreImage
 
 public class ExtendBorderFilter: CustomWarpKernelFilter {
     
-    public var inputInset: CIVector?
+    public var inputSymmetricalInsets: CIVector?
     
+    public var inputTopInset: NSNumber?
+    public var inputBottomInset: NSNumber?
+    public var inputLeftInset: NSNumber?
+    public var inputRightInset: NSNumber?
+
     public override var attributes: [String : Any] {
         
-        let inputInsetAttributes: [String : Any] = [
+        let symmetricalInsetsAttributes: [String : Any] = [
             kCIAttributeType : kCIAttributeTypeOffset,
-            kCIAttributeName: "Inset",
-            kCIAttributeDefault : ExtendBorderFilter.kDefaultInputInset
+            kCIAttributeName: "SymmetricalInsets",
+            kCIAttributeDefault : ExtendBorderFilter.kDefaultInputSymmetricalInsets
         ]
         
-        print("ExtendBorderFilter.attributes");
+        let edgeInsetAttributes: [String : Any] = [
+            kCIAttributeType : kCIAttributeTypeScalar,
+            kCIAttributeName: "EdgeInset",
+            kCIAttributeDefault : ExtendBorderFilter.kDefaultInputEdgeInset
+        ]
         
         return [
-            "inputInset" : inputInsetAttributes
+            "inputSymmetricalInsets" : symmetricalInsetsAttributes,
+            "inputTopInset" : edgeInsetAttributes,
+            "inputBottomInset" : edgeInsetAttributes,
+            "inputLeftInset" : edgeInsetAttributes,
+            "inputRightInset" : edgeInsetAttributes
         ]
     }
     
@@ -37,8 +50,22 @@ public class ExtendBorderFilter: CustomWarpKernelFilter {
             return nil
         }
         
-        guard let inset = inputInset else {
-            print("ExtendBorderFilter: Error: inputInset for filter is nil")
+        var extent: CGRect = sourceImage.extent
+        
+        if let inset = inputSymmetricalInsets {
+            extent = sourceImage.extent.insetBy(dx: inset.x, dy: inset.y)
+        }
+        else if let insetTop = inputTopInset?.floatValue,
+            let insetBottom = inputBottomInset?.floatValue,
+            let insetLeft = inputLeftInset?.floatValue,
+            let insetRight = inputRightInset?.floatValue {
+            extent.origin.x -= CGFloat(insetLeft)
+            extent.origin.y -= CGFloat(insetBottom)
+            extent.size.width += CGFloat(insetLeft + insetRight)
+            extent.size.height += CGFloat(insetTop + insetBottom)
+        }
+        else {
+            print("ExtendBorderFilter: Error: inputSymmetricalInsets and inputEdgeInsets for filter are nil")
             return nil
         }
         
@@ -46,23 +73,27 @@ public class ExtendBorderFilter: CustomWarpKernelFilter {
             return destRect
         }
         
-        let center = CIVector(x: sourceImage.extent.midX, y: sourceImage.extent.midY);
-        
-        let extent = sourceImage.extent.insetBy(dx: inset.x, dy: inset.y)
+        let size = CIVector(x: sourceImage.extent.size.width, y: sourceImage.extent.size.height)
         
         return kernel.apply(withExtent: extent,
                             roiCallback: roiCallback,
                             inputImage: sourceImage,
-                            arguments: [center])
+                            arguments: [size])
     }
     
     public override func setDefaults() {
         super.setDefaults()
         
-        inputInset = ExtendBorderFilter.kDefaultInputInset
+        inputSymmetricalInsets = ExtendBorderFilter.kDefaultInputSymmetricalInsets
+        inputTopInset = ExtendBorderFilter.kDefaultInputEdgeInset
+        inputBottomInset = ExtendBorderFilter.kDefaultInputEdgeInset
+        inputLeftInset = ExtendBorderFilter.kDefaultInputEdgeInset
+        inputRightInset = ExtendBorderFilter.kDefaultInputEdgeInset
     }
     
     //MARK: Utilty methods
     
-    private static var kDefaultInputInset = CIVector(x: 0, y: 0)
+    private static var kDefaultInputSymmetricalInsets = CIVector(x: 0.0, y: 0.0)
+    private static var kDefaultInputEdgeInset = NSNumber(value: 0.0)
+
 }

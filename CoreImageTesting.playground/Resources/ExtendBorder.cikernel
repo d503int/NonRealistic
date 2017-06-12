@@ -1,5 +1,4 @@
-kernel vec2 extendBorderKernel(vec2 center) {
-    vec2 coord = destCoord();
+vec2 sourceCoord(vec2 coord, vec2 center) {
     vec2 centeredCoord = coord - center;
 
     vec2 quotient = centeredCoord / center;
@@ -10,4 +9,11 @@ kernel vec2 extendBorderKernel(vec2 center) {
 
     coord = alpha * centeredCoord + sign * (center - unitVector) + center;
     return coord;
+}
+
+kernel vec2 extendBorderKernel(vec2 sizeNonNormalized) {
+    vec2 coord = destCoord() / sizeNonNormalized;
+    vec2 center = vec2(0.5, 0.5);
+    coord = sourceCoord(coord, center);
+    return coord * sizeNonNormalized;
 }

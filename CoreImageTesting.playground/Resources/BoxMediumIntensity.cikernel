@@ -1,0 +1,29 @@
+kernel vec4 boxMediumIntensity(sampler image, vec2 boxSize) {
+    vec2 coord = destCoord();
+
+    vec2 numberOfBoxes = vec2(int(coord.x / boxSize.x), int(coord.y / boxSize.y));
+    vec2 boxOrigin = vec2(numberOfBoxes.x * boxSize.x, numberOfBoxes.y * boxSize.y);
+
+    float alphaAtCoord = sample(image, samplerTransform(image, coord)).a;
+
+    vec3 accumulator = vec3(0.0, 0.0, 0.0);
+
+    int boxSizeX = int(boxSize.x);
+    int boxSizeY = int(boxSize.y);
+
+    for (int x = 0 ; x < boxSizeX; x++)
+    {
+        for (int y = 0; y < boxSizeY; y++)
+        {
+            vec2 workingSpaceCoordinate = boxOrigin + vec2(x, y);
+            vec2 imageSpaceCoordinate = samplerTransform(image, workingSpaceCoordinate);
+            vec3 color = sample(image, imageSpaceCoordinate).rgb;
+            accumulator.rgb += color;
+        }
+    }
+
+    float boxSamplesNumber = boxSize.x * boxSize.y;
+    accumulator.rgb /= boxSamplesNumber;
+
+    return vec4(accumulator.rgb, alphaAtCoord);
+}
