@@ -1,0 +1,4 @@
+kernel vec4 identityKernel(sampler image) {
+    vec2 coord = destCoord();
+    return sample(image, samplerTransform(image, coord));
+}

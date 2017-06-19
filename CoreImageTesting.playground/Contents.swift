@@ -68,3 +68,24 @@ boxMediumIntensityFilter.setValue(lennaImage , forKey: kCIInputImageKey)
 
 let boxMediumIntensityResult = boxMediumIntensityFilter.outputImage
 
+
+let identityWarpFilter = IdentityWarpFilter()!
+identityWarpFilter.setDefaults()
+
+identityWarpFilter.setValue(lennaImage , forKey: kCIInputImageKey)
+
+let identityWarpFilterResult = identityWarpFilter.outputImage
+
+let identityColorFilter = IdentityColorFilter()!
+identityColorFilter.setDefaults()
+
+identityColorFilter.setValue(lennaImage , forKey: kCIInputImageKey)
+
+let identityColorFilterResult = identityColorFilter.outputImage
+
+let identityGeneralFilter = IdentityFilter()!
+identityGeneralFilter.setDefaults()
+
+identityGeneralFilter.setValue(lennaImage , forKey: kCIInputImageKey)
+
+let identityGeneralFilterResult = identityGeneralFilter.outputImage

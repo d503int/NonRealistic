@@ -50,7 +50,7 @@ public class ColorMonochromeFilter: CustomColorKernelFilter {
         inputColor = ColorMonochromeFilter.kDefaultInputColor
         inputIntensity = ColorMonochromeFilter.kDefaultInputIntensity
         
-        print("ColorMonochromeFilter.setDefaults()");
+        print("ColorMonochromeFilter.setDefaults()")
     }
     
     //MARK: Utilty methods

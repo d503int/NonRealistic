@@ -1,0 +1,3 @@
+kernel vec4 identityColorKernel(__sample src) {
+    return src;
+}

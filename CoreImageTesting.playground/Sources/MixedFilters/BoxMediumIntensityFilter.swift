@@ -33,11 +33,10 @@ public class BoxMediumIntensityFilter: CustomKernelFilter<CIKernel, KernelFactor
         
         guard let boxSize = inputBoxSize else {
             print("BoxMediumIntensityFilter: Error: inputBoxSize for filter is nil")
-            return nil;
+            return nil
         }
         
         let roiCallback: CIKernelROICallback = { (_, destRect: CGRect) -> CGRect in
-            print("BoxMediumIntensityFilter: destRect: \(destRect)")
             return destRect
         }
                 
